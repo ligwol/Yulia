@@ -127,11 +127,11 @@ $quaternary: #CFD8DC;
                 height: 100vh;
                 width: 300px;
                 background-color: $tertiary;
-                color: wheat;
                 display: flex;
                 flex-direction: column;
                 transition: 300ms ease;
-                a{
+
+                a {
                     text-align: center;
                 }
             }
@@ -143,6 +143,159 @@ $quaternary: #CFD8DC;
             }
         }
 
-        
+        .content {
+            .hello__section {
+                display: flex;
+                flex-direction: column;
+
+                .hello__info {
+                    width: 500px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .hello__info-contacts {
+                        justify-content: center;
+                        align-items: center;
+
+                        .hello__info-column1 {
+                            text-align: left;
+                        }
+
+                        .hello__info-column2 {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            .skills,
+            .education {
+
+                .skills__content,
+                .education__content {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .portfolio {
+                .portfolio__slider {
+                    .slider {
+                        .slider-items__slide.active {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        .portfolio {
+            justify-content: space-between;
+            .portfolio__slider {
+                margin-top: 0;
+                .slider-nav__prev, .slider-nav__next{
+                    i{
+                        font-size: 30px;
+                    }
+                }
+                .slider {
+                    .slider-items {
+                        .slider-items__slide {
+                            &.active {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                img {
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    body {
+        .content {
+            .hello__section {
+                .hello__info {
+                    padding: 10px;
+                    margin: 10px auto;
+                    width: 250px;
+                    h1 {
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                    .hello__info-contacts{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .hello__info-column2{
+                            .links{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                    .hello__info-buttons {
+                        display: flex;
+                        flex-direction: column;
+
+                        .hello__button {
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+            .skills, .education{
+                h1 {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+
+            .portfolio {
+                justify-content: space-between;
+                padding: 20px;
+
+                h1 {
+                    flex-grow: 1;
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                .portfolio__slider {
+                    flex-grow: 3;
+
+                    .slider {
+                        .slider-items {
+                            .slider-items__slide {
+                                &.active {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+
+                                    img {
+                                        width: 200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

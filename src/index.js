@@ -1,12 +1,14 @@
 // import "./public/scss/style.scss";
-import "./style.scss";
+ import "./style.scss";
+
+
 
 const slides = document.querySelectorAll('.slider-items__slide')
 const prevBtn = document.querySelector('.slider-nav__prev')
 const nextBtn = document.querySelector('.slider-nav__next')
 
-const sliderItems = document.querySelector('.slider-items')
-
+//const sliderItems = document.querySelector('.slider-items')
+ 
 const bulletsContainer = document.querySelector('.slider-bullets')
 
 let activeSlide = 0
@@ -115,3 +117,5 @@ const toggleMenu = () => {
     header.classList.toggle('open');
 }
 burger.addEventListener('click', toggleMenu);
+
+//********************** */
